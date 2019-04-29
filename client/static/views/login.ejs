@@ -1,0 +1,30 @@
+<%- include("header"); -%>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.modal').modal('show');
+    });
+</script>
+</head>
+<body class="bg-main">
+<%- include("flash_messages")  -%>
+  <header class="masthead d-flex">
+    <div class="container text-center my-auto">
+      <h1 class="mb-1 text-warning">Login</h1>
+      <div class="row mt-3">
+        <div class="col-md-4 offset-md-4">
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-warning">Login</button>
+            <a href="/register" class="btn btn-link text-warning">Register</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
